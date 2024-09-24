@@ -1,0 +1,40 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Albacross\n"
+"POT-Creation-Date: 2015-08-18 09:04+0100\n"
+"PO-Revision-Date: 2015-08-18 09:09+0100\n"
+"Last-Translator: Karl Laurentius Roos <karlroos93@gmail.com>\n"
+"Language-Team: Karl Laurentius Roos <karlroos93@gmail.com>\n"
+"Language: sv_SE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.7.4\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
+"_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: admin.php:8
+msgid "Albacross Settings"
+msgstr "Albacross-inställningar"
+
+#: admin.php:23
+msgid "You have not yet set your Albacross client ID"
+msgstr "Du har ännu inte satt ditt Albacross klient ID"
+
+#: admin.php:23
+msgid "Update now"
+msgstr "Uppdatera nu"
+
+#: admin.php:39
+msgid "Client ID"
+msgstr "Klient-ID"
+
+#: admin.php:40
+msgid "Your client ID"
+msgstr "Ditt klient-ID"
