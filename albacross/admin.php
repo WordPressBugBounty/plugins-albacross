@@ -1,7 +1,7 @@
 <?php
 /**
  * @package Albacross
- * @version 1.3.3
+ * @version 1.4.1
  */
 
 function albacross_admin_create_menu() {
@@ -41,7 +41,7 @@ function albacross_settings_page() {
       </td>
     </tr>
   </table>
-  <?php submit_button();?>
+  <?php submit_button(__('Save tracking code', 'albacross-wordpress-plugin'));?>
 </form>
 </div>
 <?php

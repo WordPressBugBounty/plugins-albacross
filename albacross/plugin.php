@@ -1,14 +1,14 @@
 <?php
 /**
  * @package Albacross
- * @version 1.3.3
+ * @version 1.4.1
  */
 /*
-Plugin Name: Albacross
+Plugin Name: Albacross for Wordpress
 Plugin URI: https://albacross.com/
 Description: This is a plugin for enabling Albacross visitor analysis on your website.
 Author: Albacross Nordic AB
-Version: 1.3.3
+Version: 1.4.1
 Author URI: https://albacross.com/
 */
 

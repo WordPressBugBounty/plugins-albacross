@@ -1,9 +1,10 @@
-=== Plugin Name ===
+=== Albacross for Wordpress ===
 Contributors: albacross
 Tags: analytics,tracking
-Requires at least: 4.7.1
-Tested up to: 5.4.1
-Stable tag: 1.3.3
+Requires at least: 5.5
+Requires PHP: 7.4
+Tested up to: 6.9.4
+Stable tag: 1.4.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -34,6 +35,12 @@ Your client ID can be found by signing in on https://app.albacross.com/ and goin
 5. Easy to integrate
 
 == Changelog ==
+
+= 1.4.1 =
+* Compatibility update
+
+= 1.4 =
+* Compatibility update
 
 = 1.3.3 =
 * Compatibility update

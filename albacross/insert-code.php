@@ -1,8 +1,10 @@
 <?php
 /**
  * @package Albacross
- * @version 1.3.3
+ * @version 1.4.1
  */
+
+define("ALBACROSS_PLUGIN_VERSION", "1.4.1");
 
 function albacross_insert_code() {
   $client_id = get_option('albacross_client_id');
@@ -12,16 +14,9 @@ function albacross_insert_code() {
   }
 
 ?>
-<script type="text/javascript">
-  _nQc = '<?php echo trim($client_id);?>';
-  _nQs = 'WordPress-Plugin';
-  _nQsv = '1.3.1';
-  _nQt = new Date().getTime();
-  (function() {
-    var no = document.createElement('script'); no.type = 'text/javascript'; no.async = true;
-    no.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'serve.albacross.com/track.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(no, s);
-  })();
-</script>
+<script>window._nQc="<?php echo esc_js(trim($client_id));?>";</script>
+<script>window._nQs="WordPress-Plugin";</script>
+<script>window._nQsv="<?php echo esc_js(ALBACROSS_PLUGIN_VERSION); ?>";</script>
+<script async src="https://serve.albacross.com/track.js"></script>
 <?php
 }
