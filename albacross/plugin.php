@@ -1,31 +1,42 @@
 <?php
 /**
+ * Plugin Name:       Albacross – B2B Website Visitor Identification
+ * Plugin URI:        https://www.albacross.com/
+ * Description:       Identify the companies visiting your website. Adds the Albacross tracking script to WordPress in one click — no code, no theme edits.
+ * Version:           1.5.1
+ * Requires at least: 5.5
+ * Requires PHP:      7.4
+ * Author:            Albacross Nordic AB
+ * Author URI:        https://www.albacross.com/
+ * License:           GPLv2 or later
+ * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
+ * Text Domain:       albacross
+ *
  * @package Albacross
- * @version 1.4.1
  */
-/*
-Plugin Name: Albacross for Wordpress
-Plugin URI: https://albacross.com/
-Description: This is a plugin for enabling Albacross visitor analysis on your website.
-Author: Albacross Nordic AB
-Version: 1.4.1
-Author URI: https://albacross.com/
-*/
 
-$base_path = realpath(dirname(__FILE__));
+defined( 'ABSPATH' ) || exit;
 
-require $base_path . '/insert-code.php';
-require $base_path . '/admin.php';
+define( 'ALBACROSS_PLUGIN_VERSION', '1.5.0' );
+define( 'ALBACROSS_PLUGIN_FILE', __FILE__ );
+define( 'ALBACROSS_MENU_SLUG', 'albacross' );
 
-if(is_admin()) {
-    add_action('admin_menu', 'albacross_admin_create_menu');
-    add_action('admin_init', 'albacross_register_settings');
-    add_action('admin_notices', 'albacross_admin_notice' );
-}
+/**
+ * Option name. Unchanged since 1.0 so that existing installs keep their Client ID.
+ */
+define( 'ALBACROSS_OPTION_CLIENT_ID', 'albacross_client_id' );
 
-add_action('wp_footer', 'albacross_insert_code', 0);
-// add_action('plugins_loaded', 'albacross_load_textdomain');
+require_once __DIR__ . '/insert-code.php';
 
-function albacross_load_textdomain() {
-  load_plugin_textdomain('albacross-wordpress-plugin', false, dirname(plugin_basename(__FILE__)) . '/lang/');
+add_action( 'wp_enqueue_scripts', 'albacross_enqueue_tracking_script' );
+add_filter( 'script_loader_tag', 'albacross_async_script_tag', 10, 3 );
+
+if ( is_admin() ) {
+	require_once __DIR__ . '/admin.php';
+
+	add_action( 'admin_menu', 'albacross_admin_create_menu' );
+	add_action( 'admin_init', 'albacross_register_settings' );
+	add_action( 'admin_notices', 'albacross_admin_notice' );
+	add_action( 'admin_enqueue_scripts', 'albacross_admin_styles' );
+	add_filter( 'plugin_action_links_' . plugin_basename( __FILE__ ), 'albacross_plugin_action_links' );
 }
