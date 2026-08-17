@@ -1,10 +1,10 @@
 === Albacross – B2B Website Visitor Identification ===
 Contributors: albacross
 Tags: b2b, lead generation, visitor identification, analytics, abm
-Requires at least: 5.5
+Requires at least: 5.7
 Requires PHP: 7.4
 Tested up to: 7.0.2
-Stable tag: 1.5.1
+Stable tag: 1.6.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -28,7 +28,7 @@ Albacross turns anonymous traffic into a list of real companies. See which busin
 
 = What is my client ID? =
 
-Your client ID can be found by signing in on https://app.albacross.com/account/tracking?tab=wp and going to your settings.
+Your client ID can be found by signing in on [app.albacross.com](https://app.albacross.com/account/tracking?tab=wp) and going to your settings.
 
 = Do I need an Albacross account to use this plugin? =
  
@@ -63,6 +63,13 @@ For questions about the plugin itself, use the [support forum](https://wordpress
 4. Route high-intent accounts to HubSpot, Salesforce, Pipedrive, Slack, LinkedIn Ads and 30+ other tools.
 
 == Changelog ==
+
+= 1.6.0 =
+* Prevented JavaScript optimization plugins and CDNs from delaying,
+  combining, or rewriting the Albacross configuration and tracker.
+* Added compatibility with LiteSpeed Cache, WP Rocket, Autoptimize,
+  SiteGround Speed Optimizer, Jetpack Boost, Hummingbird, Perfmatters,
+  W3 Total Cache, FlyingPress, and Cloudflare Rocket Loader.
 
 = 1.5.0 =
 * Updated screenshots
