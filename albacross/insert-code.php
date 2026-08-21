@@ -61,18 +61,20 @@ function albacross_enqueue_tracking_script() {
 		return;
 	}
 
-	wp_enqueue_script(
-		ALBACROSS_SCRIPT_HANDLE,
-		ALBACROSS_SCRIPT_URL,
-		array(),
-		null, // Versioning is handled by Albacross; do not append a ver query arg.
-		true  // Footer.
+	$loader_url = add_query_arg(
+    array(
+			'client_id'      => albacross_get_client_id(),
+			'plugin_version' => ALBACROSS_PLUGIN_VERSION,
+    ),
+    plugins_url( 'assets/js/albacross-loader.js', ALBACROSS_PLUGIN_FILE )
 	);
 
-	wp_add_inline_script(
+	wp_enqueue_script(
 		ALBACROSS_SCRIPT_HANDLE,
-		albacross_get_inline_config(),
-		'before'
+		$loader_url,
+		array(),
+		ALBACROSS_PLUGIN_VERSION,
+		true
 	);
 }
 

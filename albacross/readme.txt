@@ -4,7 +4,7 @@ Tags: b2b, lead generation, visitor identification, analytics, abm
 Requires at least: 5.7
 Requires PHP: 7.4
 Tested up to: 7.0.2
-Stable tag: 1.6.0
+Stable tag: 1.6.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -63,6 +63,9 @@ For questions about the plugin itself, use the [support forum](https://wordpress
 4. Route high-intent accounts to HubSpot, Salesforce, Pipedrive, Slack, LinkedIn Ads and 30+ other tools.
 
 == Changelog ==
+
+= 1.6.1 =
+* Plugin loader fixed.
 
 = 1.6.0 =
 * Prevented JavaScript optimization plugins and CDNs from delaying,

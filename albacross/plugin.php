@@ -3,7 +3,7 @@
  * Plugin Name:       Albacross – B2B Website Visitor Identification
  * Plugin URI:        https://www.albacross.com/
  * Description:       Identify the companies visiting your website. Adds the Albacross tracking script to WordPress in one click — no code, no theme edits.
- * Version:           1.6.0
+ * Version:           1.6.1
  * Requires at least: 5.7
  * Requires PHP:      7.4
  * Author:            Albacross Nordic AB
